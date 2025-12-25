@@ -1,47 +1,57 @@
-# Business — Generative Engine Optimization Map
+# רימקס אדוונס קרית מלאכי — Generative Engine Optimization Map
+
+> A נדל"ן business.
 
 ---
 
 ## Pages
 
 ### בית
-https://example.com
+https://remax-advance-kiryat-malachi.zappy5.app
 בנו עסק משגשג בתחום הנדל'ן עם רימקס אדוונס קרית מלאכי. הצטרפו לסוכני נדל"ן מצליחים והגיעו למיליון שקל עמלות בשנה.
 
 ### שירותים
-https://example.com/services
+https://remax-advance-kiryat-malachi.zappy5.app/services
 גלו את מגוון השירותים המקצועיים שרימקס אדוונס מציעה לסוכני נדל'ן - הכשרה, טכנולוגיה, שיווק ותמיכה עסקית מלאה.
 
 ### אודות
-https://example.com/about
+https://remax-advance-kiryat-malachi.zappy5.app/about
 למדו על רימקס אדוונס קרית מלאכי - זכיינות רימקס המובילה לסוכני נדל'ן שמטרתה לעזור לכם להגיע למיליון שקל עמלות בשנה.
 
 ### צור קשר
-https://example.com/contact
+https://remax-advance-kiryat-malachi.zappy5.app/contact
 מעוניינים להצטרף לרימקס אדוונס ולבנות עסק נדל'ן משגשג? צרו קשר עוד היום ונתחיל את המסע להצלחה ביחד.
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://example.com/privacy
+https://remax-advance-kiryat-malachi.zappy5.app/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://example.com/terms
+https://remax-advance-kiryat-malachi.zappy5.app/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://example.com/accessibility
+https://remax-advance-kiryat-malachi.zappy5.app/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
 
 # Business Context (for LLM understanding)
 
-## About Business
+## About רימקס אדוונס קרית מלאכי
+רימקס אדוונס קרית מלאכי is a business in the נדל"ן industry.
+
+## Target Audience
+סוכני נדל"ן
+
+## Industry
+נדל"ן
+
 ---
 
 # Additional Resources
 
-- **Sitemap**: https://example.com/sitemap.xml
-- **Robots.txt**: https://example.com/robots.txt
+- **Sitemap**: https://remax-advance-kiryat-malachi.zappy5.app/sitemap.xml
+- **Robots.txt**: https://remax-advance-kiryat-malachi.zappy5.app/robots.txt
