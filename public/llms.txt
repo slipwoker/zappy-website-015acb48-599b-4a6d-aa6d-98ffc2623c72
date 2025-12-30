@@ -1,53 +1,63 @@
-# Business — Generative Engine Optimization Map
+# רימקס אדוונס קרית מלאכי — Generative Engine Optimization Map
+
+> A נדל"ן business.
 
 ---
 
 ## Pages
 
 ### הצטרפו לרימקס אדוונס — רימקס אדוונס קרית מלאכי
-https://remax-advance.co.il
+https://zappy-site-015acb48-599b-4a6d-aa6d.onrender.com
 בנו עסק משגשג בתחום הנדל'ן עם רימקס אדוונס קרית מלאכי. הצטרפו לסוכני נדל"ן מצליחים והגיעו למיליון שקל עמלות בשנה.
 
 ### שירותים מקצועיים לסוכני נדל"ן — רימקס אדוונס קרית מלאכי
-https://remax-advance.co.il/services
+https://zappy-site-015acb48-599b-4a6d-aa6d.onrender.com/services
 גלו את מגוון השירותים המקצועיים שרימקס אדוונס מציעה לסוכני נדל'ן - הכשרה, טכנולוגיה, שיווק ותמיכה עסקית מלאה.
 
 ### אודות רימקס אדוונס — רימקס אדוונס קרית מלאכי
-https://remax-advance.co.il/about
+https://zappy-site-015acb48-599b-4a6d-aa6d.onrender.com/about
 למדו על רימקס אדוונס קרית מלאכי - זכיינות רימקס המובילה לסוכני נדל'ן שמטרתה לעזור לכם להגיע למיליון שקל עמלות בשנה.
 
 ### Page
-https://remax-advance.co.il/menu-group-1766666271970
+https://zappy-site-015acb48-599b-4a6d-aa6d.onrender.com/menu-group-1766666271970
 
 ### צרו קשר עם רימקס אדוונס — רימקס אדוונס קרית מלאכי
-https://remax-advance.co.il/contact
+https://zappy-site-015acb48-599b-4a6d-aa6d.onrender.com/contact
 מעוניינים להצטרף לרימקס אדוונס ולבנות עסק נדל'ן משגשג? צרו קשר עוד היום ונתחיל את המסע להצלחה ביחד.
 
 ### נכסים למכירה - רימקס אדוונס קרית מלאכי
-https://remax-advance.co.il/properties
+https://zappy-site-015acb48-599b-4a6d-aa6d.onrender.com/properties
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://remax-advance.co.il/privacy
+https://zappy-site-015acb48-599b-4a6d-aa6d.onrender.com/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://remax-advance.co.il/terms
+https://zappy-site-015acb48-599b-4a6d-aa6d.onrender.com/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://remax-advance.co.il/accessibility
+https://zappy-site-015acb48-599b-4a6d-aa6d.onrender.com/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
 
 # Business Context (for LLM understanding)
 
-## About Business
+## About רימקס אדוונס קרית מלאכי
+רימקס אדוונס קרית מלאכי is a business in the נדל"ן industry.
+
+## Target Audience
+סוכני נדל"ן
+
+## Industry
+נדל"ן
+
 ---
 
 # Additional Resources
 
-- **Sitemap**: https://remax-advance.co.il/sitemap.xml
-- **Robots.txt**: https://remax-advance.co.il/robots.txt
+- **Sitemap**: https://zappy-site-015acb48-599b-4a6d-aa6d.onrender.com/sitemap.xml
+- **Robots.txt**: https://zappy-site-015acb48-599b-4a6d-aa6d.onrender.com/robots.txt
