@@ -3,7 +3,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>הצטרפו לרימקס אדוונס — רימקס אדוונס קרית מלאכי</title>
   <meta name="description" content="בנו עסק משגשג בתחום הנדל'ן עם רימקס אדוונס קרית מלאכי. הצטרפו לסוכני נדל"ן מצליחים והגיעו למיליון שקל עמלות בשנה.">
-  <meta name="keywords" content="סוכני נדל ן, סוכני נדל'ן, זכיינות רימקס לסוכני נדל'ן, איך להצטרף לרימקס כסוכן נדל'ן">
+  <meta name="keywords" content="נכסים למכירה, דירות למכירה קרית מלאכי, בתים למכירה, נדל'ן קרית מלאכי, רימקס אדוונס">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Favicons -->
@@ -62,69 +62,621 @@
   opacity: 0.7;
 }</style>
     <!-- Cookie Consent -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css">
     <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
     <!-- Mickidum Accessibility Toolbar -->
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
 
-    <style id="zappy-mobile-submenu-styles">
-      /* Mobile submenu accordion styles */
-      @media (max-width: 768px) {
-        .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu {
-          position: static !important;
-          transform: none !important;
-          box-shadow: none !important;
-          background: transparent !important;
-          margin-top: 0 !important;
-          max-height: 0;
-          overflow: hidden;
-          opacity: 0;
-          visibility: hidden;
-          transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, padding 0.3s ease;
-          padding: 0 !important;
-          border-radius: 0 !important;
+          <style id="zappy-cta-mobile-style">
+            /* Hide CTA list item on desktop (tablets and up) */
+            @media (min-width: 769px) {
+              .nav-cta-item-mobile {
+                display: none !important;
+              }
+            }
+            /* Show CTA list item on mobile */
+            @media (max-width: 768px) {
+              .nav-cta-item-mobile {
+                display: list-item !important;
+              }
+            }
+          </style>
+        
+          <style id="zappy-nested-menu-style">
+            /* Desktop only: vertically center nav items */
+            @media (min-width: 769px) {
+              .nav-menu,
+              #navMenu {
+                align-items: center !important;
+              }
+            }
+            
+            /* Menu Group styling (non-clickable parent) - TOP LEVEL ONLY with ultra-specific selector */
+            .nav-menu > li > .menu-group-title,
+            #navMenu > li > .menu-group-title {
+              display: inline-block !important;
+              padding: 0.5rem 1rem !important;
+              color: var(--nav-color) !important;
+              font-weight: 500 !important;
+              line-height: 1.7 !important;
+              cursor: default !important;
+              user-select: none !important;
+              vertical-align: middle !important;
+              text-decoration: none !important;
+              margin: 0 !important;
+              transition: color 0.3s ease !important;
+            }
+            
+            .nav-menu > li > .menu-group-title:hover,
+            #navMenu > li > .menu-group-title:hover {
+              color: var(--nav-hover-color) !important;
+            }
+            
+            /* Desktop: show submenu on Menu Group hover */
+            li:has(.menu-group-title):hover > .sub-menu {
+              opacity: 1 !important;
+              visibility: visible !important;
+              transform: translateY(0) !important;
+              pointer-events: auto !important; /* Enable interaction when hovering */
+            }
+            
+            /* Hide menu items marked as hidden (overrides hover states) */
+            .zappy-hidden-menu-item,
+            li:has(.menu-group-title):hover > .sub-menu .zappy-hidden-menu-item {
+              display: none !important;
+              opacity: 0 !important;
+              visibility: hidden !important;
+              pointer-events: none !important;
+            }
+            
+            /* Keep submenu visible when hovering over the submenu itself */
+            .sub-menu:hover {
+              opacity: 1 !important;
+              visibility: visible !important;
+              pointer-events: auto !important;
+            }
+            
+            /* Nested dropdown menu styles - using more specific selectors */
+            .nav-menu .sub-menu,
+            nav .sub-menu,
+            .navbar .sub-menu {
+              display: block !important; /* Ensure submenu is in the DOM */
+              position: absolute !important;
+              top: 100%;
+              left: 0;
+              right: auto;
+              min-width: 200px;
+              background: white;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+              border-radius: 8px;
+              padding: 8px 0;
+              margin-top: 0px; /* Remove gap to prevent hover loss */
+              opacity: 0 !important;
+              visibility: hidden !important;
+              transform: translateY(-10px);
+              transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+              z-index: 1000;
+              list-style: none;
+              pointer-events: none; /* Prevent interaction when hidden */
+            }
+            
+            /* RTL (Hebrew/Arabic) submenu positioning - align to right instead of left */
+            [dir="rtl"] .nav-menu .sub-menu,
+            [dir="rtl"] nav .sub-menu,
+            [dir="rtl"] .navbar .sub-menu,
+            html[lang="he"] .nav-menu .sub-menu,
+            html[lang="he"] nav .sub-menu,
+            html[lang="he"] .navbar .sub-menu,
+            html[lang="ar"] .nav-menu .sub-menu,
+            html[lang="ar"] nav .sub-menu,
+            html[lang="ar"] .navbar .sub-menu {
+              left: auto;
+              right: 0;
+            }
+            
+            /* Show submenu on parent hover - more specific selectors */
+            .nav-menu li:hover > .sub-menu,
+            nav li:hover > .sub-menu,
+            .navbar li:hover > .sub-menu {
+              opacity: 1 !important;
+              visibility: visible !important;
+              transform: translateY(0) !important;
+              pointer-events: auto !important; /* Enable interaction when visible */
+            }
+            
+            /* Parent item must be relatively positioned */
+            .nav-menu li:has(.sub-menu),
+            nav li:has(.sub-menu),
+            .navbar li:has(.sub-menu) {
+              position: relative;
+            }
+            
+            /* Style for submenu items */
+            .sub-menu li {
+              list-style: none;
+              margin: 0;
+              padding: 0;
+            }
+            
+            .sub-menu a,
+            .sub-menu .menu-group-title {
+              display: block !important;
+              padding: 10px 12px !important;
+              color: #333 !important;
+              font-weight: 600 !important;
+              text-decoration: none;
+              transition: background-color 0.2s;
+              white-space: nowrap;
+              cursor: default;
+            }
+            
+            .sub-menu a:hover {
+              background-color: #f5f5f5;
+            }
+            
+            /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only - must come AFTER submenu styles */
+            .nav-menu > li > .menu-group-title,
+            #navMenu > li > .menu-group-title {
+              display: inline-block !important;
+              padding: 0.5rem 1rem !important;
+              color: var(--nav-color) !important;
+              font-weight: 500 !important;
+              line-height: 1.7 !important;
+              cursor: default !important;
+              user-select: none !important;
+              vertical-align: middle !important;
+              text-decoration: none !important;
+              margin: 0 !important;
+              transition: color 0.3s ease !important;
+            }
+            
+            .nav-menu > li > .menu-group-title:hover,
+            #navMenu > li > .menu-group-title:hover {
+              color: var(--nav-hover-color) !important;
+              background-color: transparent !important;
+            }
+            
+            /* On mobile, show nested menus as expandable accordion */
+            @media (max-width: 768px) {
+              /* Mobile submenu styling */
+              .nav-menu .sub-menu,
+              nav .sub-menu,
+              .navbar .sub-menu {
+                position: static !important;
+                transform: none !important;
+                box-shadow: none !important;
+                background: transparent !important;
+                margin-top: 0 !important;
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                visibility: hidden;
+                transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, padding 0.3s ease;
+                padding: 0 !important;
+                border-radius: 0 !important;
+              }
+              
+              /* Expanded state */
+              .sub-menu.mobile-expanded {
+                max-height: 500px !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+                padding: 8px 0 8px 16px !important;
+              }
+              
+              /* RTL padding adjustment */
+              [dir="rtl"] .sub-menu.mobile-expanded,
+              html[lang="he"] .sub-menu.mobile-expanded,
+              html[lang="ar"] .sub-menu.mobile-expanded {
+                padding: 8px 16px 8px 0 !important;
+              }
+              
+              /* Disable hover behavior on mobile */
+              .nav-menu li:hover > .sub-menu,
+              nav li:hover > .sub-menu,
+              .navbar li:hover > .sub-menu {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+              }
+              
+              /* Enable visibility for expanded submenus */
+              .nav-menu li > .sub-menu.mobile-expanded,
+              nav li > .sub-menu.mobile-expanded,
+              .navbar li > .sub-menu.mobile-expanded {
+                opacity: 1 !important;
+                visibility: visible !important;
+                pointer-events: auto !important;
+              }
+              
+              .sub-menu a {
+                padding: 10px 0 !important;
+                display: block !important;
+                font-size: 14px !important;
+              }
+              
+              .sub-menu a:hover {
+                background-color: transparent !important;
+              }
+              
+              /* Parent item wrapper - flex layout for link + toggle */
+              .nav-menu li:has(.sub-menu),
+              nav li:has(.sub-menu),
+              .navbar li:has(.sub-menu) {
+                display: flex !important;
+                flex-wrap: wrap !important;
+                align-items: center !important;
+              }
+              
+              /* Parent link - takes most space, allows navigation */
+              .nav-menu li:has(.sub-menu) > a,
+              nav li:has(.sub-menu) > a,
+              .navbar li:has(.sub-menu) > a,
+              .nav-menu > li > .menu-group-title,
+              #navMenu > li > .menu-group-title {
+                flex: 1 !important;
+              }
+              
+              /* Toggle arrow button - separate clickable area */
+              .mobile-submenu-toggle {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                width: 44px !important;
+                height: 44px !important;
+                background: transparent !important;
+                border: none !important;
+                cursor: pointer !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                flex-shrink: 0 !important;
+                -webkit-tap-highlight-color: transparent;
+              }
+              
+              .mobile-submenu-toggle::after {
+                content: '' !important;
+                display: block !important;
+                width: 0 !important;
+                height: 0 !important;
+                border-left: 6px solid transparent !important;
+                border-right: 6px solid transparent !important;
+                border-top: 7px solid currentColor !important;
+                transition: transform 0.3s ease !important;
+              }
+              
+              /* Rotate arrow when expanded */
+              .mobile-submenu-toggle.expanded::after {
+                transform: rotate(180deg) !important;
+              }
+              
+              /* Submenu takes full width below parent */
+              .nav-menu li:has(.sub-menu) > .sub-menu,
+              nav li:has(.sub-menu) > .sub-menu,
+              .navbar li:has(.sub-menu) > .sub-menu {
+                flex-basis: 100% !important;
+                width: 100% !important;
+              }
+            }
+            
+            /* Hide toggle button on desktop */
+            @media (min-width: 769px) {
+              .mobile-submenu-toggle {
+                display: none !important;
+              }
+            }
+          </style>
+          
+          <script id="zappy-mobile-menu-script">
+            // Mobile menu toggle for nested submenus (including Menu Groups)
+            // Uses separate toggle button - link navigates, arrow toggles submenu
+            (function() {
+              function initMobileMenuToggles() {
+                // Only run on mobile
+                if (window.innerWidth > 768) {
+                  // Remove any toggle buttons on desktop
+                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn => btn.remove());
+                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu => {
+                    menu.classList.remove('mobile-expanded');
+                  });
+                  console.log('[MOBILE MENU] Desktop mode - cleanup done');
+                  return;
+                }
+                
+                console.log('[MOBILE MENU] Initializing mobile menu toggles...');
+                
+                // Find all parent menu items (items with .sub-menu)
+                const menuItemsWithSubmenus = document.querySelectorAll(
+                  '.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)'
+                );
+                
+                console.log('[MOBILE MENU] Found', menuItemsWithSubmenus.length, 'items with submenus');
+                
+                menuItemsWithSubmenus.forEach(function(li) {
+                  // Skip if already has toggle button
+                  if (li.querySelector('.mobile-submenu-toggle')) {
+                    return;
+                  }
+                  
+                  const submenu = li.querySelector('.sub-menu');
+                  const parentLink = li.querySelector(':scope > a') || li.querySelector(':scope > .menu-group-title');
+                  
+                  if (!submenu || !parentLink) return;
+                  
+                  // Create toggle button
+                  const toggleBtn = document.createElement('button');
+                  toggleBtn.className = 'mobile-submenu-toggle';
+                  toggleBtn.setAttribute('aria-label', 'Toggle submenu');
+                  toggleBtn.setAttribute('type', 'button');
+                  
+                  // Insert toggle button after the link
+                  parentLink.insertAdjacentElement('afterend', toggleBtn);
+                  
+                  console.log('[MOBILE MENU] Created toggle button for:', parentLink.textContent?.trim());
+                  
+                  // Handle toggle button click - only toggles submenu
+                  toggleBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const isExpanded = submenu.classList.contains('mobile-expanded');
+                    
+                    // Close all other submenus first
+                    document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) {
+                      if (menu !== submenu) {
+                        menu.classList.remove('mobile-expanded');
+                        const otherToggle = menu.parentElement.querySelector('.mobile-submenu-toggle');
+                        if (otherToggle) otherToggle.classList.remove('expanded');
+                      }
+                    });
+                    
+                    // Toggle this submenu
+                    submenu.classList.toggle('mobile-expanded');
+                    toggleBtn.classList.toggle('expanded');
+                    
+                    console.log('[MOBILE MENU] Toggled submenu:', !isExpanded ? 'expanded' : 'collapsed');
+                  });
+                  
+                  // Parent link navigates normally - no preventDefault
+                });
+              }
+              
+              // Initialize on DOM load
+              if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initMobileMenuToggles);
+              } else {
+                initMobileMenuToggles();
+              }
+              
+              // Re-initialize on window resize (but use debounce to avoid too many calls)
+              let resizeTimer;
+              window.addEventListener('resize', function() {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(initMobileMenuToggles, 250);
+              });
+              
+              // Also initialize when mobile menu becomes visible
+              // This handles cases where the mobile menu is hidden initially
+              const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                  if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                    const target = mutation.target;
+                    if (target.classList.contains('active') || target.style.display !== 'none') {
+                      console.log('[MOBILE MENU] Mobile menu became visible, re-initializing...');
+                      setTimeout(initMobileMenuToggles, 100);
+                    }
+                  }
+                });
+              });
+              
+              // Observe mobile menu containers
+              const mobileMenus = document.querySelectorAll('.mobile-menu, .nav-menu, #navMenu');
+              mobileMenus.forEach(function(menu) {
+                observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] });
+              });
+            })();
+          </script>
+        <!-- Zappy Analytics -->
+<script>
+(function() {
+  'use strict';
+  
+  // Configuration
+  var config = {
+    websiteId: '015acb48-599b-4a6d-aa6d-98ffc2623c72',
+    apiUrl: 'https://api.zappy5.com/api/analytics/track',
+    sessionDuration: 30 * 60 * 1000, // 30 minutes
+    visitorDuration: 30 * 24 * 60 * 60 * 1000, // 30 days
+    trackPageViews: true,
+    trackClicks: true,
+    trackFormSubmissions: true
+  };
+  
+  // Generate or retrieve persistent visitor ID (30 days)
+  function getVisitorId() {
+    var visitorKey = 'zappy_visitor_' + config.websiteId;
+    var visitor = null;
+    
+    try {
+      visitor = localStorage.getItem(visitorKey);
+      if (visitor) {
+        var visitorData = JSON.parse(visitor);
+        var now = Date.now();
+        
+        // Check if visitor ID is still valid (30 days)
+        if (now - visitorData.created < config.visitorDuration) {
+          // Update last seen timestamp
+          visitorData.lastSeen = now;
+          localStorage.setItem(visitorKey, JSON.stringify(visitorData));
+          return visitorData.id;
         }
-        .sub-menu.mobile-expanded {
-          max-height: 500px !important;
-          opacity: 1 !important;
-          visibility: visible !important;
-          padding: 8px 0 8px 16px !important;
-        }
-        [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded, html[lang="ar"] .sub-menu.mobile-expanded {
-          padding: 8px 16px 8px 0 !important;
-        }
-        .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu {
-          opacity: 0; visibility: hidden; pointer-events: none;
-        }
-        .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded, #navMenu li > .sub-menu.mobile-expanded {
-          opacity: 1 !important; visibility: visible !important; pointer-events: auto !important;
-        }
-        .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) {
-          display: flex !important; flex-wrap: wrap !important; align-items: center !important;
-        }
-        .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, #navMenu li:has(.sub-menu) > a {
-          flex: 1 !important;
-        }
-        .mobile-submenu-toggle {
-          display: flex !important; align-items: center !important; justify-content: center !important;
-          width: 44px !important; height: 44px !important; background: transparent !important;
-          border: none !important; cursor: pointer !important; padding: 0 !important; margin: 0 !important;
-          flex-shrink: 0 !important; -webkit-tap-highlight-color: transparent;
-        }
-        .mobile-submenu-toggle::after {
-          content: '' !important; display: block !important; width: 0 !important; height: 0 !important;
-          border-left: 6px solid transparent !important; border-right: 6px solid transparent !important;
-          border-top: 7px solid currentColor !important; transition: transform 0.3s ease !important;
-        }
-        .mobile-submenu-toggle.expanded::after { transform: rotate(180deg) !important; }
-        .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu, .navbar li:has(.sub-menu) > .sub-menu, #navMenu li:has(.sub-menu) > .sub-menu {
-          flex-basis: 100% !important; width: 100% !important;
-        }
-        .sub-menu a { padding: 10px 0 !important; display: block !important; font-size: 14px !important; }
-        .sub-menu a:hover { background-color: transparent !important; }
       }
-      @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
-    </style>
+    } catch (e) {
+      console.warn('Zappy Analytics: LocalStorage not available');
+    }
+    
+    // Generate new visitor ID
+    var newVisitorId = 'zv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      localStorage.setItem(visitorKey, JSON.stringify({
+        id: newVisitorId,
+        created: Date.now(),
+        lastSeen: Date.now()
+      }));
+    } catch (e) {
+      // Continue without local storage
+    }
+    
+    return newVisitorId;
+  }
+  
+  // Generate or retrieve session ID (30 minutes)
+  function getSessionId() {
+    var sessionKey = 'zappy_session_' + config.websiteId;
+    var session = null;
+    
+    try {
+      session = sessionStorage.getItem(sessionKey);
+      if (session) {
+        var sessionData = JSON.parse(session);
+        var now = Date.now();
+        
+        // Check if session is still valid
+        if (now - sessionData.timestamp < config.sessionDuration) {
+          // Update timestamp
+          sessionData.timestamp = now;
+          sessionStorage.setItem(sessionKey, JSON.stringify(sessionData));
+          return sessionData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: SessionStorage not available');
+    }
+    
+    // Generate new session ID
+    var newSessionId = 'zs_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      sessionStorage.setItem(sessionKey, JSON.stringify({
+        id: newSessionId,
+        timestamp: Date.now()
+      }));
+    } catch (e) {
+      // Continue without session storage
+    }
+    
+    return newSessionId;
+  }
+  
+  var visitorId = getVisitorId();
+  var sessionId = getSessionId();
+  
+  // Track an event
+  function trackEvent(eventType, data) {
+    data = data || {};
+    
+    var eventData = {
+      website_id: config.websiteId,
+      event_type: eventType,
+      page_path: window.location.pathname,
+      referrer: document.referrer || 'direct',
+      visitor_id: visitorId,
+      session_id: sessionId,
+      metadata: data
+    };
+    
+    // Use sendBeacon if available (better for page unload events)
+    if (navigator.sendBeacon) {
+      var blob = new Blob([JSON.stringify(eventData)], { type: 'application/json' });
+      navigator.sendBeacon(config.apiUrl, blob);
+    } else {
+      // Fallback to fetch
+      fetch(config.apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(eventData),
+        keepalive: true
+      }).catch(function(error) {
+        console.warn('Zappy Analytics: Failed to track event', error);
+      });
+    }
+  }
+  
+  // Track page view
+  if (config.trackPageViews) {
+    trackEvent('pageview', {
+      title: document.title,
+      url: window.location.href
+    });
+  }
+  
+  // Track clicks on important elements
+  if (config.trackClicks) {
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+      
+      // Track button clicks (counted as actions)
+      if (target.tagName === 'BUTTON' || target.closest('button')) {
+        var button = target.tagName === 'BUTTON' ? target : target.closest('button');
+        trackEvent('click', {
+          element: 'button',
+          text: button.textContent.trim().substring(0, 100),
+          id: button.id || null,
+          class: button.className || null
+        });
+      }
+      
+      // Track link clicks (navigation - not counted as actions)
+      else if (target.tagName === 'A' || target.closest('a')) {
+        var link = target.tagName === 'A' ? target : target.closest('a');
+        trackEvent('navigation', {
+          element: 'link',
+          text: link.textContent.trim().substring(0, 100),
+          href: link.href,
+          external: link.hostname !== window.location.hostname
+        });
+      }
+    }, true);
+  }
+  
+  // Track form submissions
+  if (config.trackFormSubmissions) {
+    document.addEventListener('submit', function(e) {
+      var form = e.target;
+      
+      trackEvent('form_submit', {
+        form_id: form.id || null,
+        form_name: form.name || null,
+        form_action: form.action || null,
+        form_method: form.method || 'GET'
+      });
+    }, true);
+  }
+  
+  // Track time on page (send on page unload)
+  var pageLoadTime = Date.now();
+  
+  window.addEventListener('beforeunload', function() {
+    var timeOnPage = Math.floor((Date.now() - pageLoadTime) / 1000); // in seconds
+    
+    trackEvent('page_unload', {
+      time_on_page: timeOnPage,
+      page_path: window.location.pathname
+    });
+  });
+  
+  // Expose tracking function globally for custom events
+  window.zappyAnalytics = {
+    track: trackEvent,
+    getVisitorId: function() { return visitorId; },
+    getSessionId: function() { return sessionId; }
+  };
+  
+})();
+</script>
+<!-- End Zappy Analytics -->
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
@@ -137,33 +689,31 @@
     <div class="container nav-container">
       <div class="nav-brand">
         <a href="/" class="logo-link">
-          <img src="/assets/logo.webp" alt="רימקס אדוונס קרית מלאכי" class="logo" />
+          <img src="/assets/logo.webp" alt="רימקס אדוונס קרית מלאכי" class="logo">
         </a>
       </div>
       
       <button class="mobile-toggle" id="mobileToggle" aria-label="פתח תפריט">
         <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+          <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         </svg>
         <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;">
-          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         </svg>
       </button>
       
       <button class="phone-header-btn" aria-label="התקשרו אלינו">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
         </svg>
       </button>
       
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="/services">שירותים</a></li>
-        <li><a href="/about">אודות</a></li>
-      </ul>
+      <ul class="nav-menu" id="navMenu"><li><a href="/services">שירותים</a></li><li><a href="/about">אודות</a></li><li class="nav-cta-item-mobile"><a href="/contact">צרו קשר</a></li>
+        <li><a href="/properties">נכסים למכירה</a></li></ul>
       
       <div class="nav-cta-container">
         <li class="nav-cta-item">
-          <a href="/contact" class="nav-cta-btn">צור קשר</a>
+          <a href="/contact" class="nav-cta-btn">צרו קשר</a>
         </li>
       </div>
     </div>
@@ -171,84 +721,257 @@
 
   <section class="hero">
     <div class="hero-overlay"></div>
-    <img data-placeholder="hero-1" data-context="Modern RE/MAX office in Kiryat Malachi with successful real estate agents collaborating, bright professional workspace with RE/MAX branding" src="/assets/hero-hero-1.webp" alt="משרד רימקס אדוונס קרית מלאכי - סוכני נדל'ן מצליחים" class="hero-img">
+    <img data-placeholder="hero-1" data-context="Modern RE/MAX office in Kiryat Malachi with successful real estate agents collaborating, bright professional workspace with RE/MAX branding" src="/assets/business-general-service-upload-1767090715591.webp" alt="נכסים למכירה בקרית מלאכי - רימקס אדוונס" class="hero-img zappy-editable-image" style="object-position: 50% 50%;" data-element-id="img-1767090537249-h9ibmctml" width="1283" height="600">
     <div class="container hero-content">
-      <h1>בנו עסק נדל"ן משגשג שמכניס מיליון שקל בשנה</h1>
-      <h3>הצטרפו לרימקס אדוונס קרית מלאכי ותהפכו לסוכני נדל ן מובילים עם תמיכה מקצועית מלאה</h3>
-      <a href="/contact" class="btn-primary hero-cta">התחילו את המסע שלכם</a>
+      <h1>נכסים למכירה בקרית מלאכי ואזור הדרום</h1>
+      <h3>מגוון רחב של דירות, בתים ונכסים מסחריים עם שירות מקצועי וליווי מלא לאורך כל תהליך הרכישה</h3>
+      <div class="hero-cta-buttons">
+        <a id="element-saved-1766666091268-3w2v9kiy0md" href="/properties" class="btn btn-primary" style="background-color: #043051; border: 2px solid #0284c7; color: #ffffff; padding: 12px 24px; border-radius: 6px; transition: all 0.3s; cursor: pointer !important; text-decoration: none; display: inline-block; border-color: #043051; margin-left: 10px;" data-element-type="button">צפה בנכסים זמינים</a>
+        <a href="/contact" class="btn btn-secondary" style="background-color: #94a3b8; border: 2px solid #94a3b8; color: #1a1a1a; padding: 12px 24px; border-radius: 6px; transition: all 0.3s; cursor: pointer !important; text-decoration: none; display: inline-block;" data-element-type="button">קבע פגישת סיור</a>
+      </div>
     </div>
   </section>
 
   <section class="intro-section">
     <div class="container">
-      <h2>למה לבחור ברימקס אדוונס קרית מלאכי?</h2>
+      <h2>למה לבחור ברימקס אדוונס לרכישת נכס?</h2>
       <div class="intro-content">
-        <p>רימקס אדוונס קרית מלאכי היא לא סתם זכיינות רימקס לסוכני נדל"ן - זו פלטפורמה מקצועית שנבנתה במיוחד כדי לעזור לסוכני נדל"ן להגיע להכנסות של מיליון שקל עמלות בשנה. אנחנו מספקים את כל הכלים, ההכשרה והתמיכה הדרושים לכם כדי לבנות עסק משגשג ויציב בתחום הנדל"ן.</p>
-        <p>עם רימקס אדוונס, אתם מקבלים גישה לטכנולוגיות המתקדמות ביותר בשוק, מערכות CRM חכמות, כלי שיווק דיגיטליים מתקדמים, והכשרה מקצועית מתמשכת. אנחנו מאמינים שסוכני נדל ן מצליחים נבנים על בסיס של ידע, טכנולוגיה ותמיכה מקצועית.</p>
+        <p>רימקס אדוונס קרית מלאכי מציעה שירות מקצועי ומקיף לקונים של נכסים באזור הדרום. אנחנו מלווים אתכם בכל שלב של תהליך הרכישה - מהחיפוש הראשוני ועד למסירת המפתחות, עם תמיכה משפטית מלאה, סיוע במימון ומשכנתא, והערכות שווי מקצועיות.</p>
+        <p>עם מאגר הנכסים הגדול ביותר בקרית מלאכי והידע המעמיק שלנו בשוק המקומי, אנחנו מבטיחים לכם מציאת הנכס המושלם שמתאים בדיוק לצרכים ולתקציב שלכם. הצוות המקצועי שלנו זמין עבורכם לאורך כל הדרך.</p>
       </div>
     </div>
   </section>
 
-  <section class="services-preview">
+  <section class="property-categories-section">
     <div class="container">
-      <h2>מה אנחנו מציעים לסוכני נדל"ן?</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <img data-placeholder="service-1" data-context="Professional real estate training session with RE/MAX trainer teaching agents about sales techniques and market analysis" src="/assets/service-service-1.webp" alt="הכשרה מקצועית לסוכני נדל'ן" class="service-img">
-          <h3>הכשרה מקצועית מתקדמת</h3>
-          <p>תוכניות הכשרה מקיפות המותאמות לסוכני נדל ן בכל רמה - ממתחילים ועד מנוסים. למדו את הטכניקות המתקדמות ביותר במכירה, שיווק ומשא ומתן.</p>
+      <h2>קטגוריות נכסים</h2>
+      <div class="categories-grid">
+        <div class="category-card">
+          <div class="category-icon">
+            <i class="fas fa-building"></i>
+          </div>
+          <h3>דירות למכירה</h3>
+          <p>מגוון רחב של דירות בכל הגדלים והמחירים - מדירות קטנות ועד פנטהאוזים מרווחים</p>
+          <a href="/properties" class="btn-secondary" data-element-type="button" style="background-color: transparent; border-color: #0ea5e9; color: #0ea5e9; border: 2px solid #0ea5e9">צפה בנכסים</a>
         </div>
         
-        <div class="service-card">
-          <img data-placeholder="service-2" data-context="Modern CRM system dashboard showing property listings, client management, and analytics tools for real estate agents" src="/assets/service-service-2.webp" alt="מערכות טכנולוגיות מתקדמות לסוכני נדל'ן" class="service-img">
-          <h3>טכנולוגיה חכמה ומתקדמת</h3>
-          <p>גישה למערכות CRM מתקדמות, כלי שיווק דיגיטליים, ופלטפורמות ניהול נכסים שיעזרו לכם לנהל את העסק ביעילות מקסימלית.</p>
+        <div class="category-card">
+          <div class="category-icon">
+            <i class="fas fa-home"></i>
+          </div>
+          <h3>בתים פרטיים</h3>
+          <p>בתים פרטיים ובתי דו-משפחתי באזורים מבוקשים עם גינות ומרחבים פתוחים</p>
+          <a href="/properties" class="btn-secondary">צפה בנכסים</a>
         </div>
         
-        <div class="service-card">
-          <img data-placeholder="service-3" data-context="Digital marketing campaign for real estate showing social media ads, property websites, and online lead generation" src="/assets/service-service-3.webp" alt="שיווק דיגיטלי מתקדם לסוכני נדל'ן" class="service-img">
-          <h3>שיווק ומיתוג מקצועי</h3>
-          <p>תמיכה מלאה בשיווק דיגיטלי, בניית מותג אישי, קמפיינים ממומנים ברשתות החברתיות, ואסטרטגיות שיווק מבוססות נתונים.</p>
+        <div class="category-card">
+          <div class="category-icon">
+            <i class="fas fa-map-marked-alt"></i>
+          </div>
+          <h3>מגרשים</h3>
+          <p>מגרשים למגורים ולבנייה במיקומים אסטרטגיים ברחבי קרית מלאכי והסביבה</p>
+          <a href="/properties" class="btn-secondary">צפה בנכסים</a>
         </div>
         
-        <div class="service-card">
-          <img data-placeholder="service-4" data-context="RE/MAX support team meeting with agents providing guidance and business development strategies" src="/assets/service-service-4.webp" alt="תמיכה עסקית מלאה לסוכני נדל'ן" class="service-img">
-          <h3>תמיכה עסקית מתמשכת</h3>
-          <p>ליווי אישי ותמיכה מקצועית בכל שלב - מהקמת העסק ועד להגעה ליעדים השנתיים שלכם. אנחנו כאן בשבילכם 24/7.</p>
+        <div class="category-card">
+          <div class="category-icon">
+            <i class="fas fa-store"></i>
+          </div>
+          <h3>נכסים מסחריים</h3>
+          <p>משרדים, חנויות ומבני תעשייה להשקעה ולשימוש עסקי</p>
+          <a href="/properties" class="btn-secondary">צפה בנכסים</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured-properties-section">
+    <div class="container">
+      <h2>נכסים נבחרים</h2>
+      <div class="properties-grid">
+        <div class="property-card">
+          <div class="property-image">
+            <img src="/assets/property-1.webp" alt="דירת 4 חדרים קרית מלאכי" loading="lazy">
+            <span class="property-badge">חדש</span>
+          </div>
+          <div class="property-content">
+            <h3 class="property-title">דירת 4 חדרים מרווחת</h3>
+            <p class="property-location">📍 קרית מלאכי, שכונת נווה אפרים</p>
+            <div class="property-details">
+              <span class="detail-item">🛏️ 4 חדרים</span>
+              <span class="detail-item">📐 95 מ"ר</span>
+              <span class="detail-item">🏢 קומה 2</span>
+            </div>
+            <p class="property-description">
+              דירה מרווחת ומוארת בשכונה שקטה ומבוקשת. כוללת מרפסת גדולה, חניה ומחסן. קרובה לבתי ספר, גנים ומרכזי קניות.
+            </p>
+            <div class="property-footer">
+              <span class="property-price">₪1,250,000</span>
+              <a href="/contact" class="btn btn-primary btn-small">פרטים נוספים</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="property-card">
+          <div class="property-image">
+            <img src="/assets/property-2.webp" alt="דירת גן אשקלון" loading="lazy">
+            <span class="property-badge featured">מומלץ</span>
+          </div>
+          <div class="property-content">
+            <h3 class="property-title">דירת גן 5 חדרים</h3>
+            <p class="property-location">📍 אשקלון, שכונת ברנע</p>
+            <div class="property-details">
+              <span class="detail-item">🛏️ 5 חדרים</span>
+              <span class="detail-item">📐 120 מ"ר</span>
+              <span class="detail-item">🏢 קומת קרקע</span>
+            </div>
+            <p class="property-description">
+              דירת גן יוקרתית עם גינה פרטית של 80 מ"ר. משופצת ברמה גבוהה, מטבח חדש, 2 חניות ומחסן גדול. מיקום מעולה קרוב לים.
+            </p>
+            <div class="property-footer">
+              <span class="property-price">₪1,850,000</span>
+              <a href="/contact" class="btn btn-primary btn-small">פרטים נוספים</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="property-card">
+          <div class="property-image">
+            <img src="/assets/property-3.webp" alt="בית פרטי קרית גת" loading="lazy">
+          </div>
+          <div class="property-content">
+            <h3 class="property-title">בית פרטי 6 חדרים</h3>
+            <p class="property-location">📍 קרית גת, שכונת הזיתים</p>
+            <div class="property-details">
+              <span class="detail-item">🛏️ 6 חדרים</span>
+              <span class="detail-item">📐 180 מ"ר</span>
+              <span class="detail-item">🏡 בית פרטי</span>
+            </div>
+            <p class="property-description">
+              בית פרטי מרווח על מגרש של 300 מ"ר. כולל בריכה, גינה מעוצבת, 3 חניות ויחידת דיור נפרדת. אזור שקט ומבוקש.
+            </p>
+            <div class="property-footer">
+              <span class="property-price">₪2,450,000</span>
+              <a href="/contact" class="btn btn-primary btn-small">פרטים נוספים</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="property-card">
+          <div class="property-image">
+            <img src="/assets/property-4.webp" alt="דירת 3 חדרים אשדוד" loading="lazy">
+          </div>
+          <div class="property-content">
+            <h3 class="property-title">דירת 3 חדרים מחודשת</h3>
+            <p class="property-location">📍 אשדוד, רובע ט'</p>
+            <div class="property-details">
+              <span class="detail-item">🛏️ 3 חדרים</span>
+              <span class="detail-item">📐 75 מ"ר</span>
+              <span class="detail-item">🏢 קומה 4</span>
+            </div>
+            <p class="property-description">
+              דירה משופצת לחלוטין בבניין מתוחזק. מעלית, חניה, מזגן בכל חדר. קרובה למרכזי תחבורה, קניות ובילוי.
+            </p>
+            <div class="property-footer">
+              <span class="property-price">₪1,450,000</span>
+              <a href="/contact" class="btn btn-primary btn-small">פרטים נוספים</a>
+            </div>
+          </div>
         </div>
       </div>
       <div class="cta-center">
-        <a href="/services" class="btn-secondary">גלו את כל השירותים</a>
+        <a href="/properties" class="btn-secondary">צפה בכל הנכסים</a>
       </div>
     </div>
   </section>
 
-  <section class="process-section">
+  <section class="buyer-services-section">
     <div class="container">
-      <h2>איך להצטרף לרימקס כסוכן נדל"ן?</h2>
+      <h2>שירותים לקונים</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-gavel"></i>
+          </div>
+          <h3>ליווי משפטי מלא</h3>
+          <p>ליווי משפטי מקצועי לאורך כל תהליך הרכישה - מבדיקת המסמכים ועד לחתימה על החוזה</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-hand-holding-usd"></i>
+          </div>
+          <h3>סיוע במימון ומשכנתא</h3>
+          <p>עזרה במציאת המשכנתא המתאימה ביותר עם התנאים הטובים ביותר בשוק</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>הערכת שווי נכס</h3>
+          <p>הערכות שווי מקצועיות ומדויקות המבוססות על ניתוח מעמיק של שוק הנדל"ן המקומי</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h3>בדיקות טכניות</h3>
+          <p>ארגון בדיקות טכניות מקצועיות לוודא את מצב הנכס לפני הרכישה</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-key"></i>
+          </div>
+          <h3>ליווי עד למסירת מפתחות</h3>
+          <p>תמיכה מלאה לאורך כל התהליך עד לרגע קבלת המפתחות והכניסה לבית החדש</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h3>תמיכה לאחר הרכישה</h3>
+          <p>המשך תמיכה וייעוץ גם לאחר השלמת העסקה לכל שאלה או צורך</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="buying-process-section">
+    <div class="container">
+      <h2>תהליך הרכישה</h2>
       <div class="process-steps">
         <div class="process-step">
           <div class="step-number">1</div>
-          <h3>פגישת היכרות</h3>
-          <p>נתחיל בפגישה אישית לבחינת התאימות ולהבנת היעדים והציפיות שלכם מהעסק.</p>
+          <h3>פגישת היכרות וגיבוש צרכים</h3>
+          <p>נתחיל בפגישה אישית להבנת הצרכים, התקציב והעדפות המיקום שלכם</p>
         </div>
         
         <div class="process-step">
           <div class="step-number">2</div>
-          <h3>תוכנית עבודה אישית</h3>
-          <p>נבנה ביחד תוכנית עבודה מותאמת אישית שתוביל אתכם להצלחה ולהשגת היעדים.</p>
+          <h3>חיפוש וסיור בנכסים</h3>
+          <p>נציג בפניכם נכסים מתאימים ונארגן סיורים בנכסים שמעניינים אתכם</p>
         </div>
         
         <div class="process-step">
           <div class="step-number">3</div>
-          <h3>הכשרה והשקה</h3>
-          <p>תעברו הכשרה מקיפה ותקבלו את כל הכלים והמערכות הדרושים להשקת העסק.</p>
+          <h3>משא ומתן וחתימת הסכם</h3>
+          <p>ננהל משא ומתן מקצועי בשמכם ונלווה בחתימה על הסכם הרכישה</p>
         </div>
         
         <div class="process-step">
           <div class="step-number">4</div>
-          <h3>ליווי והצלחה</h3>
-          <p>נלווה אתכם לאורך כל הדרך עם תמיכה מקצועית ואסטרטגיות מוכחות להצלחה.</p>
+          <h3>ליווי משפטי ומימון</h3>
+          <p>נסייע בכל ההיבטים המשפטיים ובהשגת המשכנתא המתאימה ביותר</p>
+        </div>
+        
+        <div class="process-step">
+          <div class="step-number">5</div>
+          <h3>מסירת דירה</h3>
+          <p>נלווה אתכם עד לרגע מסירת המפתחות והכניסה לבית החדש שלכם</p>
         </div>
       </div>
     </div>
@@ -259,12 +982,12 @@
       <h2>המספרים מדברים בעד עצמם</h2>
       <div class="stats-grid">
         <div class="stat-item">
-          <div class="stat-number">1M+</div>
-          <div class="stat-label">שקל עמלות שנתיות ממוצע</div>
+          <div class="stat-number">500+</div>
+          <div class="stat-label">נכסים זמינים</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number">50+</div>
-          <div class="stat-label">סוכני נדל"ן מצליחים</div>
+          <div class="stat-number">1000+</div>
+          <div class="stat-label">לקוחות מרוצים</div>
         </div>
         <div class="stat-item">
           <div class="stat-number">95%</div>
@@ -272,7 +995,7 @@
         </div>
         <div class="stat-item">
           <div class="stat-number">24/7</div>
-          <div class="stat-label">תמיכה מקצועית</div>
+          <div class="stat-label">שירות ותמיכה</div>
         </div>
       </div>
     </div>
@@ -280,13 +1003,13 @@
 
   <section class="cta-section">
     <div class="container">
-      <h2>מוכנים להתחיל את המסע להצלחה?</h2>
-      <p>הצטרפו לרימקס אדוונס קרית מלאכי והפכו לסוכני נדל ן מובילים בשוק. אנחנו כאן כדי לעזור לכם להגיע ליעד של מיליון שקל עמלות בשנה.</p>
-      <a href="/contact" class="btn-primary">צרו קשר עוד היום</a>
+      <h2>מעוניינים בנכס? צרו קשר</h2>
+      <p>הצוות המקצועי שלנו ברימקס אדוונס קרית מלאכי כאן כדי לעזור לכם למצוא את הנכס המושלם. צרו קשר עוד היום ונתחיל את המסע למציאת הבית של החלומות שלכם.</p>
+      <a href="/contact" class="btn-primary">צרו קשר</a>
     </div>
   </section>
 
-  <a href="https://wa.me/[business_phone]" target="_blank" class="whatsapp-float" aria-label="WhatsApp" rel="noopener noreferrer">
+  <a href="#" target="_blank" class="whatsapp-float" aria-label="WhatsApp" rel="noopener noreferrer" style="display:none;">
     <i class="fab fa-whatsapp"></i>
   </a>
 
@@ -298,9 +1021,9 @@
           <div class="all-rights-reserved">
             <p>© 2025 רימקס אדוונס קרית מלאכי. כל הזכויות שמורות.</p>
           </div>
-          <div class="footer-social"><a href="[social_facebook]" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-<a href="[social_instagram]" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-<a href="[social_whatsapp]" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></div>
+          <div class="footer-social"><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="display:none;"><i class="fab fa-facebook"></i></a>
+<a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="display:none;"><i class="fab fa-instagram"></i></a>
+<a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" style="display:none;"><i class="fab fa-whatsapp"></i></a></div>
           <div class="footer-legal">
             <a href="/privacy" aria-label="מדיניות פרטיות">
               מדיניות פרטיות

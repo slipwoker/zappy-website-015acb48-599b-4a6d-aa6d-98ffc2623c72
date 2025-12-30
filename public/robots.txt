@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://remax-advance-kiryat-malachi.zappy5.app/sitemap.xml
+Sitemap: https://remax-advance.co.il/sitemap.xml

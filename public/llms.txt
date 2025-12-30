@@ -1,57 +1,53 @@
-# רימקס אדוונס קרית מלאכי — Generative Engine Optimization Map
-
-> A נדל"ן business.
+# Business — Generative Engine Optimization Map
 
 ---
 
 ## Pages
 
-### בית
-https://remax-advance-kiryat-malachi.zappy5.app
+### הצטרפו לרימקס אדוונס — רימקס אדוונס קרית מלאכי
+https://remax-advance.co.il
 בנו עסק משגשג בתחום הנדל'ן עם רימקס אדוונס קרית מלאכי. הצטרפו לסוכני נדל"ן מצליחים והגיעו למיליון שקל עמלות בשנה.
 
-### שירותים
-https://remax-advance-kiryat-malachi.zappy5.app/services
+### שירותים מקצועיים לסוכני נדל"ן — רימקס אדוונס קרית מלאכי
+https://remax-advance.co.il/services
 גלו את מגוון השירותים המקצועיים שרימקס אדוונס מציעה לסוכני נדל'ן - הכשרה, טכנולוגיה, שיווק ותמיכה עסקית מלאה.
 
-### אודות
-https://remax-advance-kiryat-malachi.zappy5.app/about
+### אודות רימקס אדוונס — רימקס אדוונס קרית מלאכי
+https://remax-advance.co.il/about
 למדו על רימקס אדוונס קרית מלאכי - זכיינות רימקס המובילה לסוכני נדל'ן שמטרתה לעזור לכם להגיע למיליון שקל עמלות בשנה.
 
-### צור קשר
-https://remax-advance-kiryat-malachi.zappy5.app/contact
+### Page
+https://remax-advance.co.il/menu-group-1766666271970
+
+### צרו קשר עם רימקס אדוונס — רימקס אדוונס קרית מלאכי
+https://remax-advance.co.il/contact
 מעוניינים להצטרף לרימקס אדוונס ולבנות עסק נדל'ן משגשג? צרו קשר עוד היום ונתחיל את המסע להצלחה ביחד.
+
+### נכסים למכירה - רימקס אדוונס קרית מלאכי
+https://remax-advance.co.il/properties
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://remax-advance-kiryat-malachi.zappy5.app/privacy
+https://remax-advance.co.il/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://remax-advance-kiryat-malachi.zappy5.app/terms
+https://remax-advance.co.il/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://remax-advance-kiryat-malachi.zappy5.app/accessibility
+https://remax-advance.co.il/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
 
 # Business Context (for LLM understanding)
 
-## About רימקס אדוונס קרית מלאכי
-רימקס אדוונס קרית מלאכי is a business in the נדל"ן industry.
-
-## Target Audience
-סוכני נדל"ן
-
-## Industry
-נדל"ן
-
+## About Business
 ---
 
 # Additional Resources
 
-- **Sitemap**: https://remax-advance-kiryat-malachi.zappy5.app/sitemap.xml
-- **Robots.txt**: https://remax-advance-kiryat-malachi.zappy5.app/robots.txt
+- **Sitemap**: https://remax-advance.co.il/sitemap.xml
+- **Robots.txt**: https://remax-advance.co.il/robots.txt
